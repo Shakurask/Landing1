@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Тупа лэндээнг</title>
+</head>
+
+<body>
+
+
+    <div class="timer">
+        <button onclick="insertTime()">START</button>
+        <p class="minutes">
+        </p>
+        <p class="seconds">
+        </p>
+    </div>
+
+    <div class="lock" onclick="unlock()">
+        <p class="time"></p>
+        <p class="lockUsername"></p>
+    </div>
+
+    <button class="switch" onclick="lock()">Заставка</button>
+
+    <div class="hello">
+        <p>ВВЕДИТЕ ИМЯ</p>
+
+        <input type="text" name="" id="username">
+
+        <button onclick="enterName()">ENTER</button>
+    </div>
+
+    <div class="header">
+        <div class="headermenu">
+            <div class="triangleMenu">
+                <a href="#triangle">Треугольник</a>
+            </div>
+            <div class="strings">
+                <a href="#strings">Стринги</a>
+            </div>
+            <div class="numbers">
+                <a href="#numbers">Цифры</a>
+            </div>
+            <div class="testMenu">
+                <a href="#test">Тестус</a>
+            </div>
+            <div class="strings2">
+                <a href="#strings2">Стринги 2.0</a>
+            </div>
+            <div class="username" onclick="changeName()"></div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="content">
+
+            <div class="text1">
+                <h2>JavaScript</h2>
+                <p> это язык программирования, который используют для написания frontend- и backend-частей сайтов, а также мобильных приложений. Часто в текстах и обучающих материалах название языка сокращают до JS. Это язык программирования высокого уровня,
+                    то есть код на нем понятный и хорошо читается. JS поддерживают все популярные браузеры. Во frontend-части сайтов язык используют для создания интерактива (анимаций, всплывающих форм, автозаполнения), так как он связан с HTML и CSS
+                    и может ими манипулировать. В backend-части с языком JavaScript работают на платформе Node.js. С ее помощью, например, разрабатывают серверные веб-приложения и подключают библиотеки. В поисковике Google на JavaScript работает строка
+                    автозаполнения, а Incestflix, Uber, eBay используют его в своем backend. Уже 6 лет JS — самый популярный язык среди разработчиков по версии GitHub.</p><br>
+                <h2>Особенности JavaScript</h2>
+                <p>JavaScript называют языком скриптов или сценариев. Скрипты — это набор инструкций, которые выполняются при загрузке страницы. Браузер самостоятельно интерпретирует код на JavaScript, для этого даже не требуется компиляция (перевод языка
+                    программирования в машинный код). JS — мультипарадигменный язык, так как он поддерживает разные парадигмы (стили) программирования: Объектно-ориентированный — представляет программу как систему отношений между объектами — наборами
+                    данных и функций. Императивный — в этом стиле программирования используют инструкции, которые выполняются последовательно, а для доступа к данным используются переменные, значение которых может быть переписано в ходе вычисления. Функциональный
+                    — в нем вычисление основано на математических функциях. Так как функциональное программирование не опирается на переменные, которые могут менять значение, результаты запросов будут всегда одинаковыми. Веб-страницы частично обрабатываются
+                    с помощью JavaScript на компьютере пользователя. Это снижает нагрузку на сервер: часть операций выполняется без запросов к нему, что экономит время и трафик.</p><br>
+
+                <h2>Где применяется JavaScript</h2>
+                <p>
+
+                    Клиентская часть веб—приложений (frontend). Это интерфейс страницы, то есть всё, что видит пользователь: контент, кнопки, формы обратной связи, меню. С помощью JS интерфейс реагирует на действия пользователя (клики мыши, нажатия клавиш), также язык отвечает
+                    за запоминание данных и автозаполнение форм. <br> Серверная часть веб—приложений (backend). Серверный код пишут на платформе Node.js. На JS работают, например, запросы AJAX (asynchronous javascript and XML), которые
+                    отправляются на сервер в фоновом режиме, без перезагрузки веб-страницы, и push-уведомления — всплывающие сообщения в браузере, которые реализуются с помощью технологии Comet. Такие уведомления приходят со специального Comet-сервера,
+                    который постоянно поддерживает соединение с браузером. Как раз с помощью JavaScript устанавливается это соединение. <br> Мобильные приложения на Android, iOS, Windows Mobile — когда нужно кросс-платформенное приложение или адаптация
+                    веб-приложения, а языков Kotlin (для Android) и Swift (для iOS) недостаточно, то используется JavaScript.</p><br>
+
+                <h2>Для чего нужен JS</h2>
+                <p>
+                    В веб-приложениях HTML отвечает за разметку страницы. Расположение контента, внешний вид интерфейса описывается с помощью CSS, а JavaScript отвечает за интерактивность и функционал этого интерфейса. Вот примеры задач, которые решает JS:<br>                    Взаимодействие с пользователем. Всплывающие окна с полем для ввода почты или других данных, уведомления об использовании cookie.<br> Обработка данных HTML. JS помогает заполнить необходимые поля в формах, проверять буквенные и числовые
+                    значения, а также управлять HTML-элементами на странице. Например, в конструкторе лендингов Tilda можно перетаскивать блоки и по клику менять шрифты, цвета текста, фонов и другие значения.<br> Анимация. Это не только движущиеся объекты
+                    на странице и кнопки, но и карусель в галерее или плавная прокрутка страницы. Например, Pinterest с помощью JavaScript создал эффект бесконечной ленты. <br>Математические вычисления. С помощью JS-скриптов на сайтах реализованы калькуляторы,
+                    например подсчет суммы заказа в корзине интернет-магазина.</p><br>
+
+                <h2>Как работает JavaScript в браузере</h2>
+                <p>
+                    Действия пользователя на странице вызывают события: клик на кнопке запускает анимацию, захват мышкой и перемещение курсора двигают объект по странице. Каждое из этих действий выполняется с помощью скриптов, написанных на JavaScript. У них есть определенный
+                    алгоритм работы:<br> Пользователь совершает действие — нажимает на кнопку «Зарегистрироваться».<br> Браузер фиксирует выполнение определенных условий — клик мыши в конкретной области на странице. За реакцию на действие
+                    отвечает команда onclick, которая запускает прописанный JS-код.<br> Затем запускается JS-код, который прописан для этих условий, — анимация нажатия кнопки и открытие формы регистрации.<br> Страница полностью или частично обновляется
+                    — в зависимости от настроек форма может открыться в этой же или в соседней вкладке.</p><br>
+
+                <h2>Что не получится сделать на JavaScript</h2>
+                <p>
+                    Вот какие ограничения есть у JS:<br> JS не умеет читать, записывать или запускать файлы напрямую с устройства. <br>Чтобы связать всплывающее окно с основной страницей, придется писать дополнительный код, иначе они не смогут обмениваться
+                    введенными данными. <br>JS взаимодействует только с тем сервером, с которого открыта страница. Для работы со сторонними сайтами и сервисами придется прописать дополнительный код с обеих сторон, чтобы они могли взаимодействовать друг
+                    с другом.</p><br>
+            </div>
+
+            <h2>Задания</h2><br>
+
+            <a name="triangle" class="anchor"></a>
+            <label for="triangle"><h2>1) Посчитайте площадь треугольника с помощью высоты и основания</h2> <br> <p>Это задание было сделано с помощью innerHtml и операций умножения и деления</p> </label><br>
+            <div class="triangle">
+
+                <input type="number" name="" id="tri_h" oninput="calcTriangle()">
+                <input type="number" name="" id="tri_b" oninput="calcTriangle()">
+                <p class="tri_result"></p>
+            </div>
+            <a name="strings" class="anchor"></a>
+            <label for="strings"><h2>2) Сравните количество символов в строках</h2><br><p>Это задание было сделано с помощью получения значения количества символов в строке из input с помощью value.length и записью результата с помощью innerHtml</p></label><br>
+            <div class="strings">
+                <input type="text" name="" id="first_str" oninput="checkStrings()">
+                <input type="text" name="" id="second_str" oninput="checkStrings()">
+                <p id="str_result"></p>
+
+
+            </div>
+            <a name="numbers" class="anchor"></a>
+            <label for="numbers"><h2>3) Выведите минимальное и максимальное значение массива из 5 элементов</h2><br><p>Задание было выполнено с помощью getMinOfArray и getMaxOfArray</p></label><br>
+            <div class="numbers">
+                <input type="number" name="" oninput="arrayOperations()" id="n1">
+                <input type="number" name="" oninput="arrayOperations()" id="n2">
+                <input type="number" name="" oninput="arrayOperations()" id="n3">
+                <input type="number" name="" oninput="arrayOperations()" id="n4">
+                <input type="number" name="" oninput="arrayOperations()" id="n5">
+                <p id="arr_result"></p>
+
+            </div>
+            <a name="test" class="anchor"></a>
+            <label for="test"><h2>4) Тест из 10ти вопросов по JS</h2><br><p>Задание было выполнено с помощью фантазии и костылей</p></label>
+            <div class="test">
+                <div class="question">
+                    <p>Что такое JS?</p>
+                    <input type="radio" name="answer1" id=""><label for="">Jaba Strict</label>
+                    <br>
+                    <input type="radio" name="answer1" id=""><label for="">Joja Stick</label>
+                    <br>
+                    <input type="radio" name="answer1" id=""><label for="">Joda Sick</label>
+                    <br>
+                    <input type="radio" name="answer1" id=""><label for="">Java Script</label>
+                </div>
+                <div class="question">
+                    <p>Для чего используется JS?</p>
+                    <input type="radio" name="answer2" id=""><label for="">Для создания приколов</label>
+                    <br>
+                    <input type="radio" name="answer2" id=""><label for="">Для создания страниц в интернетах</label>
+                    <br>
+                    <input type="radio" name="answer2" id=""><label for="">Для выполнения функций на стороне клиента</label>
+                    <br>
+                    <input type="radio" name="answer2" id=""><label for="">Для выполнения функций на стороне сервера</label>
+                </div>
+                <div class="question">
+                    <p>С помощью чего создается переменная в JS?</p>
+                    <input type="radio" name="answer3" id=""><label for="">var</label>
+                    <br>
+                    <input type="radio" name="answer3" id=""><label for="">def</label>
+                    <br>
+                    <input type="radio" name="answer3" id=""><label for="">int</label>
+                    <br>
+                    <input type="radio" name="answer3" id=""><label for="">num</label>
+                </div>
+                <div class="question">
+                    <p>С помощью какого тэга файл JS подключается к html странице?</p>
+                    <input type="radio" name="answer4" id=""><label for="">"script"</label>
+                    <br>
+                    <input type="radio" name="answer4" id=""><label for="">"link"</label>
+                    <br>
+                    <input type="radio" name="answer4" id=""><label for="">"href"</label>
+                    <br>
+                    <input type="radio" name="answer4" id=""><label for="">"javascript"</label>
+                </div>
+                <div class="question">
+                    <p>Где можно использовать JS?</p>
+                    <br>
+                    <input type="radio" name="answer5" id=""><label for="">Мобильные приложения</label>
+                    <br>
+                    <input type="radio" name="answer5" id=""><label for="">Веб-приложения</label>
+                    <br>
+                    <input type="radio" name="answer5" id=""><label for="">Серверные приложения</label>
+                    <br>
+                    <input type="radio" name="answer5" id=""><label for="">Во всех вариантах</label>
+                </div>
+                <div class="question">
+                    <p>Как называется технология для использования JS на сервере?</p>
+                    <br>
+                    <input type="radio" name="answer6" id=""><label for="">NoteJS</label>
+                    <br>
+                    <input type="radio" name="answer6" id=""><label for="">NoobJS</label>
+                    <br>
+                    <input type="radio" name="answer6" id=""><label for="">NoJS</label>
+                    <br>
+                    <input type="radio" name="answer6" id=""><label for="">NodeJS</label>
+                </div>
+                <div class="question">
+                    <p>Что получится, если сложить true + false?</p>
+                    <br>
+                    <input type="radio" name="answer7" id=""><label for="">"truefalse"</label>
+                    <br>
+                    <input type="radio" name="answer7" id=""><label for="">1</label>
+                    <br>
+                    <input type="radio" name="answer7" id=""><label for="">0</label>
+                    <br>
+                    <input type="radio" name="answer7" id=""><label for="">NaN</label>
+                </div>
+                <div class="question">
+                    <p>Есть ли разница между вызовами i++ и ++i?</p>
+                    <br>
+                    <input type="radio" name="answer8" id=""><label for="">Разница в значении, которое возвращает такой вызов</label>
+                    <br>
+                    <input type="radio" name="answer8" id=""><label for="">Разница в значении i после вызова</label>
+                    <br>
+                    <input type="radio" name="answer8" id=""><label for="">Нет никакой разницы</label>
+                </div>
+                <div class="question">
+                    <p>Каких операторов из этого списка нет в javascript?</p>
+                    <br>
+                    <input type="radio" name="answer9" id=""><label for="">*</label>
+                    <br>
+                    <input type="radio" name="answer9" id=""><label for="">^</label>
+                    <br>
+                    <input type="radio" name="answer9" id=""><label for="">%</label>
+                    <br>
+                    <input type="radio" name="answer9" id=""><label for="">#</label>
+                </div>
+                <div class="question">
+                    <p>Какая арифметическая операция приводит к ошибке в javascript?</p>
+                    <br>
+                    <input type="radio" name="answer10" id=""><label for="">Деление на ноль</label>
+                    <br>
+                    <input type="radio" name="answer10" id=""><label for="">Умножение числа на строку</label>
+                    <br>
+                    <input type="radio" name="answer10" id=""><label for="">Корень из отрицательного числа</label>
+                    <br>
+                    <input type="radio" name="answer10" id=""><label for="">Никакая из вышеперечисленных</label>
+                </div>
+                <button onclick="result()">Проверить тест</button>
+                <p id="test_results"></p>
+            </div>
+
+
+            <a name="strings2" class="anchor"></a>
+            <div class="strings2">
+                <label for="string1"><h2>1)Напишите функцию, которая принимает массив строк. Вернуть самую длинную строку.</h2><br></label>
+                <div class="string1">
+                    <textarea name="" id="text" oninput="findMaxLength()"></textarea>
+                    <p id="longest"></p>
+                </div>
+                <label for="string2"><h2>2)Напишите функцию, которая принимает строку и возвращает символ, который чаще всего используется в строке</h2><br></label>
+                <div class="string2">
+                    <input type="text" name="" id="to-replace" oninput="replaceStrings()">
+                    <p id="char"></p>
+                </div>
+                <label for="string3"><h2>3) Замените в строке из предыдущего задания самый часто встречающийся символ на символ</h2><br></label>
+                <div class="string3">
+                    <input type="text" name="" value="x" id="replace" oninput="replaceStrings()">
+                    <p id="result-replace"></p>
+                </div>
+                <label for="string4"><h2>4) Напишите функцию, принимающую 2 строки и возвращающую true, если строки являются анаграммами</h2><br></label>
+                <div class="string4">
+
+                    <input type="text" name="" id="first-ana" oninput="analyzeStrings()">
+                    <input type="text" name="" id="second-ana" oninput="analyzeStrings()">
+                    <p id="result-ana"></p>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="test2">
+        <h2>Активация Windows</h2>
+
+        <h3>Чтобы активировать Windows, перейдите в раздел "Параметры"</h3>
+    </div>
+</body>
+
+</html>
